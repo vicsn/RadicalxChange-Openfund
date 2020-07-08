@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
 import "./HomeTopBar.scss";
-import { ActionContext, StateContext } from "../../hooks";
-import { Search } from "react-feather";
+import { StateContext } from "../../hooks";
+// import { Search } from "react-feather";
 function HomeTopBar() {
-  const { searchBusinesses } = useContext(ActionContext);
-  const { searchText, backupBusinesses, roundDetails } = useContext(StateContext);
+  // const { searchBusinesses } = useContext(ActionContext);
+  const { roundDetails } = useContext(StateContext);
 
   return (
     <div className="home-top-bar">
@@ -13,14 +13,15 @@ function HomeTopBar() {
       </div> */}
       <h1 className="home-head-line">Support Local Businesses</h1>
       {roundDetails.round_status === "Ongoing" ? (
-        <div>
+        <div className="bottom-margin-set">
           <h3 className="home-tag-line">$25k Pilot Round Live Now</h3>
           <h4 className="home-tag-line">
-            Contribute by July 15th 2020 to get your contribution Matched!
+            Contribute to these 5 businesses by July 15th 2020 to get your
+            contribution Matched!
           </h4>
         </div>
       ) : (
-        <p className="home-tag-line">
+        <p className="home-tag-line bottom-margin-set">
           <span role="img" aria-label="tada">
             🎉
           </span>{" "}
@@ -31,7 +32,7 @@ function HomeTopBar() {
           </span>
         </p>
       )}
-      <div className="list-action-container">
+      {/* <div className="list-action-container">
         <div className="home-search-container">
           <Search></Search>
           <input
@@ -41,15 +42,15 @@ function HomeTopBar() {
             value={searchText}
             onChange={(e) => searchBusinesses(e.target.value, backupBusinesses)}
           />
-        </div>
-        {/* <div className="home-sort-container">
+        </div> */}
+      {/* <div className="home-sort-container">
           <span>Sort By:</span>
           <div className="home-sort-value">
             <span>Least Funded</span>
             <ChevronDown></ChevronDown>
           </div>
-        </div> */}
-      </div>
+        </div>
+      </div> */}
     </div>
   );
 }

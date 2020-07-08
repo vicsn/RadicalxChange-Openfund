@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { ActionContext } from "../../hooks";
 import slugify from "react-slugify";
 import Truncate from "react-truncate";
-import NumberFormat from "react-number-format";
+// import NumberFormat from "react-number-format";
 
 function BusinessItem({ business }: any) {
   const { selectBusiness } = useContext(ActionContext);
@@ -39,7 +39,7 @@ function BusinessItem({ business }: any) {
           {business.short_description}
         </Truncate>
       </p>
-      <p className="top-margin-set business-donation-widget-donation-details">
+      {/* <p className="top-margin-set business-donation-widget-donation-details">
         <span className="business-donation-widget-donation-details-amount">
           <NumberFormat
             value={Number.parseFloat(business.donation_received).toFixed(2)}
@@ -96,7 +96,7 @@ function BusinessItem({ business }: any) {
           />{" "}
           goal
         </span>
-      </div>
+      </div> */}
       <div className="business-item-button-container">
         <button type="button" className="business-item-button">
           Read More
