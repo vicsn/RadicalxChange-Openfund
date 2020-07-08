@@ -3,6 +3,7 @@ import "./Header.scss";
 import { Home, ChevronDown, ChevronUp } from "react-feather";
 import { ActionContext, StateContext } from "../../hooks";
 import { Link, useLocation } from "react-router-dom";
+import makeBlockie from "ethereum-blockies-base64";
 
 function Header() {
   const location = useLocation();
@@ -19,7 +20,17 @@ function Header() {
       <div className="header-profile-container">
         {user ? (
           <>
-            <img src={user.profile_pic} alt="profile" className="profile-icon" />
+            <img
+              src={
+                user.profile_pic
+                  ? user.profile_pic
+                  : user.email
+                  ? makeBlockie(user.email)
+                  : null
+              }
+              alt="profile"
+              className="profile-icon"
+            />
             <div
               className="header-profile-drop-down-icon"
               onClick={(e) => setDropdownActive(!dropdownActive)}
@@ -33,17 +44,17 @@ function Header() {
           </>
         ) : (
           <>
-            {/* <div
+            <div
               className="profile-item"
               onClick={(e) => setModalConfig(true, { type: "signUp" })}
             >
-              Create an account
-            </div> */}
+              Sign up
+            </div>
             <div
               className="profile-item"
               onClick={(e) => setModalConfig(true, { type: "login" })}
             >
-              Sign Up/Log In
+              Log In
             </div>
           </>
         )}

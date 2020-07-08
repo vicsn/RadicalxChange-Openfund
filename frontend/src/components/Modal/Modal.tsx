@@ -9,6 +9,7 @@ import Share from "../Share";
 import DonationThank from "../DonationThank";
 import QFExplainer from "../QFExplainer";
 import LegalInfo from "../LegalInfo";
+import ConfirmMail from "../ConfirmMail";
 
 function Modal() {
   const { setModalConfig } = useContext(ActionContext);
@@ -48,6 +49,7 @@ function Modal() {
             <DonationThank></DonationThank>
           )}
           {modalConfig.type === "qfExplainer" && <QFExplainer></QFExplainer>}
+          {modalConfig.type === "confirmMail" && <ConfirmMail></ConfirmMail>}
         </div>
       </div>
     </div>
