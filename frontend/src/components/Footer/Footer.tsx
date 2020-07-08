@@ -7,7 +7,34 @@ function Footer() {
   return (
     <div className="footer">
       <div className="footer-container-left container-spacing-set">
-        <h3 className="top-margin-set">About QF-For-Businesses</h3>
+        <h3 className="top-margin-set">Get Involved</h3>
+        <p className="top-margin-set">
+          {" "}
+          Interested in participating in the next Downtown Stimulus round for
+          Boulder, Colorado? Do you want more information for bringing Downtown
+          Stimulus to your town or region? Get in touch below!
+        </p>
+        <ul>
+          <li>
+            <a
+              href="https://docs.google.com/forms/u/4/d/e/1FAIpQLSfVTx4fPMUDEphzQiKstlz-JkDcx0RFW5Gxv4IO32zGk1AeaQ/viewform?usp=send_form"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Boulder Business Sign-Up Form
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSfCsp5llRKXY2GswtbrtLu_d0SOmkdbEuVjaZv3fFBLQOHYPw/viewform"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Bring Downtown Stimulus to My Town
+            </a>
+          </li>
+        </ul>
+        <h3 className="top-margin-set">About Quadratic Funding</h3>
         <p className="top-margin-set">
           {" "}
           Downtown Stimulus is a democratic way of funding projects. They’ve put

@@ -54,6 +54,13 @@ function QFExplainer() {
         11 contributors to the round
       </p>
       <p className="top-margin-set">
+        <b>Important Note:</b> About Quadratic Funding: Total matching is calculated
+        at the end of the round. That is why all matches displayed are estimates
+        only. Actual matches will be determined at the end of the round by how many
+        people total have donated to the business. The total matching amount any one
+        business can earn is capped at $8,000 of the $25,0000 fund.
+      </p>
+      <p className="top-margin-set">
         In Downtown Stimulus, the preferences of the many outweigh the preferences of
         the few.{" "}
         <a
