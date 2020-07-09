@@ -351,6 +351,10 @@ class StripeSecretKeyView(generics.GenericAPIView):
         print(request.META)
         if serializer.is_valid(raise_exception=True):
             try:
+                user = request.user
+                if not user.stripe_customer_id:
+                    customer = stripe.Customer.create(name=user.get_full_name(), email=user.email)
+                    user.stripe_customer_id = customer['id']
                 business_id = serializer.validated_data.get('business_id')
                 business = Business.objects.get(pk=int(business_id))
                 resp = stripe.PaymentIntent.create(
@@ -359,6 +363,7 @@ class StripeSecretKeyView(generics.GenericAPIView):
                     payment_method_types=['card'],
                     description='Downtown Stimulus Donation',
                     stripe_account=business.stripe_id,
+                    customer=user.stripe_customer_id,
                     shipping={
                         'address': {
                             'line1': serializer.validated_data.get('shipping_address', ''),
@@ -367,6 +372,7 @@ class StripeSecretKeyView(generics.GenericAPIView):
                         'name': serializer.validated_data.get('name'),
                     }
                 )
+                user.save()
             except Exception as e:
                 logger.exception('Cannot Create Stripe Client Secret Key ' + str(e))
                 raise APIException('Cannot Create Stripe Client Secret Key')
