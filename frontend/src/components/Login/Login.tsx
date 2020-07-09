@@ -15,7 +15,7 @@ function Login() {
         if (data.ok) {
           const user = await data.json();
           setUserData(user);
-          setModalConfig(true, { type: "" });
+          setModalConfig(false, { type: "" });
         } else {
           const error = await data.json();
           showAlert(error.non_field_errors.join());
