@@ -7,15 +7,6 @@ function SocialLogin({ type }) {
 
   return (
     <>
-      <div className="login-facebook-button-container top-margin-set">
-        <button
-          type="button"
-          className="login-facebook-button"
-          onClick={(e) => facebookSignIn(type)}
-        >
-          Connect with Facebook
-        </button>
-      </div>
       <div className="login-google-button-container top-margin-set">
         <button
           type="button"
@@ -23,6 +14,15 @@ function SocialLogin({ type }) {
           onClick={(e) => googleSignIn(type)}
         >
           Connect with Google
+        </button>
+      </div>
+      <div className="login-facebook-button-container top-margin-set">
+        <button
+          type="button"
+          className="login-facebook-button"
+          onClick={(e) => facebookSignIn(type)}
+        >
+          Connect with Facebook
         </button>
       </div>
     </>

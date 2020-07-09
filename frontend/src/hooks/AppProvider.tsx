@@ -21,6 +21,8 @@ const actionInitialValue = {
   logoutUser: () => {},
   updateUser: (id: string, updatedUser: any) => {},
   getClrRound: () => {},
+  setUserData: (user: any) => {},
+  showAlert: (message: string) => {},
 };
 const stateInitialValue = {
   openModal: false,
@@ -205,7 +207,11 @@ export const AppProvider = (props: any) => {
           //     });
           // } else {
           const authToken = await FirebaseService.getAuthToken();
-          WebService.loginUser(result.user.email, authToken)
+
+          WebService.loginUser({
+            username: result.user.email,
+            oauth_uuid: authToken,
+          })
             .pipe(catchError((err) => of(`I caught: ${err}`)))
             .subscribe(async (data) => {
               if (data.ok) {
@@ -255,7 +261,11 @@ export const AppProvider = (props: any) => {
           //     });
           // } else {
           const authToken = await FirebaseService.getAuthToken();
-          WebService.loginUser(result.user.email, authToken)
+
+          WebService.loginUser({
+            username: result.user.email,
+            oauth_uuid: authToken,
+          })
             .pipe(catchError((err) => of(`I caught: ${err}`)))
             .subscribe(async (data) => {
               if (data.ok) {
@@ -275,6 +285,13 @@ export const AppProvider = (props: any) => {
         } catch (err) {
           console.error(err);
         }
+      },
+      setUserData: (user: any) => {
+        sessionStorage.setItem("user", JSON.stringify(user));
+        dispatch({
+          type: "SET_USER",
+          user,
+        });
       },
       logoutUser: async () => {
         sessionStorage.removeItem("user");
@@ -366,6 +383,9 @@ export const AppProvider = (props: any) => {
             roundDetails: data,
           });
         });
+      },
+      showAlert: (message: string) => {
+        alert.error(message);
       },
     }),
     // eslint-disable-next-line react-hooks/exhaustive-deps

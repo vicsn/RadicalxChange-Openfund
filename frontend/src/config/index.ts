@@ -9,3 +9,5 @@ export const setSelectedBusinessStripeAccountId = (
 ) => {
   selectedBusinessStripeAccountId = pSelectedBusinessStripeAccountId;
 };
+
+export const TEST_SITE_KEY = "6Lf8Lq8ZAAAAAMcvLBPMfV-AFImJM12-JJluZskI";
