@@ -75,7 +75,7 @@ def aggregate_contributions(grant_contributions):
 '''
 
 
-def calculate_clr(aggregated_contributions, _cap=6250, total_pot=25000.0):
+def calculate_clr(aggregated_contributions, _cap=8000, total_pot=25000.0):
     saturation_point = False
     bigtot = 0
     totals = []
@@ -100,11 +100,13 @@ def calculate_clr(aggregated_contributions, _cap=6250, total_pot=25000.0):
 
         # 1. normalize
         if bigtot >= total_pot:
-            t['clr_amount'] = ((clr_amount / bigtot) * total_pot) 
+            clr_amount = ((clr_amount / bigtot) * total_pot)
 
         # 2. cap clr amount
         if clr_amount >= _cap:
-            t['clr_amount'] = _cap
+            clr_amount = _cap
+
+        t['clr_amount'] = clr_amount
         
         # 3. calculate the total clr to be distributed
         bigtot_normalized_cap += t['clr_amount']
@@ -116,7 +118,7 @@ def calculate_clr(aggregated_contributions, _cap=6250, total_pot=25000.0):
     return totals, bigtot_normalized_cap, saturation_point
 
 
-def calculate_live_clr(aggregated_contributions, business_id, _cap=6250, total_pot=25000.0):
+def calculate_live_clr(aggregated_contributions, business_id, _cap=8000, total_pot=25000.0):
     '''
 
     Calculates the CLR match for user before donation
@@ -150,11 +152,13 @@ def calculate_live_clr(aggregated_contributions, business_id, _cap=6250, total_p
 
         # 1. normalize
         if bigtot >= total_pot:
-            t['clr_amount'] = ((clr_amount / bigtot) * total_pot)
+            clr_amount = ((clr_amount / bigtot) * total_pot)
 
-            # 2. cap clr amount
+        # 2. cap clr amount
         if clr_amount >= _cap:
-            t['clr_amount'] = _cap
+            clr_amount = _cap
+
+        t['clr_amount'] = clr_amount
 
         # 3. calculate the total clr to be distributed
         bigtot_normalized_cap += t['clr_amount']

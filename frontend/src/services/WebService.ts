@@ -51,16 +51,13 @@ export const postUser = (user: any): Observable<any> => {
   });
 };
 
-export const loginUser = (email: any, oauth_uuid: string): Observable<any> => {
+export const loginUser = (user: any): Observable<any> => {
   return defer(() => {
     return from<Promise<any>>(
       fetch(`${ROOT_URL}/api-token-auth/`, {
         headers: { "Content-Type": "application/json; charset=utf-8" },
         method: "POST",
-        body: JSON.stringify({
-          username: email,
-          oauth_uuid,
-        }),
+        body: JSON.stringify(user),
       }),
     );
   });
