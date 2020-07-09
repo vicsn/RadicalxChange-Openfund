@@ -2,6 +2,7 @@
   text-align: center;
   margin: 1.5em;
   padding: 1.5em;
+  min-width: 436px;
 
   .login-header {
     font-size: 26.9008px;
@@ -28,6 +29,7 @@
   .login-input-container {
     display: flex;
     flex-direction: column;
+    flex: 1 1;
 
     .login-input-label {
       color: var(--grey4Color);
@@ -39,6 +41,12 @@
       border: 1px solid var(--grey3Color);
       border-radius: 4px;
       margin-top: 4px;
+    }
+
+    .password-tag {
+      font-size: 12px;
+      text-align: left;
+      color: var(--grey3Color);
     }
   }
 
