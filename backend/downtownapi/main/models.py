@@ -15,6 +15,7 @@ class User(AbstractUser):
     profile_pic = models.CharField(max_length=1024, blank=True)
     phone_number = models.CharField(max_length=20, blank=True, null=True)
     oauth_uuid = models.CharField(max_length=256, blank=True, null=True)
+    stripe_customer_id = models.CharField(max_length=256, default='', blank=True, null=True)
     is_email_verified = models.BooleanField(default=False)
 
     def __str__(self):
