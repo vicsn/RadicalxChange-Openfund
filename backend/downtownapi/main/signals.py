@@ -23,7 +23,7 @@ def send_register_mail(sender, instance, **kwargs):
             except Exception as e:
                 print(e)
         else:
-            current_site = 'https://downtownstimulus.com'
+            current_site = 'https://api.downtownstimulus.com'
             uid = urlsafe_base64_encode(force_bytes(instance.pk))
             token = account_activation_token.make_token(instance)
             params = {
