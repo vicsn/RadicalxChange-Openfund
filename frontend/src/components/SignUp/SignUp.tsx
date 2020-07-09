@@ -46,7 +46,9 @@ function SignUp() {
                         setModalConfig(true, { type: "confirmMail" });
                       } else {
                         const error = await data.json();
-                        showAlert(error.non_field_errors.join());
+                        Object.keys(error).forEach((key) => {
+                          showAlert(error[key].join());
+                        });
                       }
                     });
                   } else {
@@ -133,6 +135,10 @@ function SignUp() {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
+        <span className="password-tag">
+          Must have at-least 8 char, a digit, lower alphabet, upper alphabet &
+          special char.
+        </span>
       </div>
       <div className="login-input-container top-margin-set">
         <label className="login-input-label">Re-enter Password</label>

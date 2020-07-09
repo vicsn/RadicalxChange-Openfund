@@ -18,7 +18,9 @@ function Login() {
           setModalConfig(false, { type: "" });
         } else {
           const error = await data.json();
-          showAlert(error.non_field_errors.join());
+          Object.keys(error).forEach((key) => {
+            showAlert(error[key].join());
+          });
         }
       });
     } else {
@@ -34,7 +36,6 @@ function Login() {
   };
   return (
     <div className="login">
-      <img src={require("../../assets/app-icon.svg")} alt="logo" />
       <h2 className="login-header">Connect with Downtown Stimulus</h2>
       <SocialLogin type="login" />
       <p className="login-text top-margin-set">Or login with your email!</p>
@@ -52,7 +53,6 @@ function Login() {
         <label className="login-input-label">Password</label>
         <input
           type="password"
-          placeholder="e.g. ******"
           className="login-input"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
