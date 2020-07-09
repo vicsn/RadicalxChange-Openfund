@@ -3,8 +3,8 @@ import "./SignUp.scss";
 import SocialLogin from "../SocialLogin";
 import { ActionContext } from "../../hooks";
 import { WebService } from "../../services";
-import ReCAPTCHA from "react-google-recaptcha";
-import { TEST_SITE_KEY } from "../../config";
+// import { GoogleReCaptchaProvider, GoogleReCaptcha } from "react-google-recaptcha-v3";
+// import { TEST_SITE_KEY } from "../../config";
 import {
   containsSpecialCharacters,
   containsUpperCase,
@@ -22,10 +22,12 @@ function SignUp() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [rePassword, setRePassword] = useState("");
+  // const [token, setToken] = useState("");
 
   const signUp = () => {
     // console.log(firstName, lastName, email, password, rePassword);
     if (isFieldNonEmpty()) {
+      // if (token) {
       if (validateEmail(email)) {
         if (password === rePassword) {
           if (validatePasswordLength(password)) {
@@ -68,11 +70,16 @@ function SignUp() {
       } else {
         showAlert("Please enter correct email address");
       }
+      // } else {
+      //   showAlert("Please verify recaptcha");
+      // }
     } else {
       showAlert("Please fill all the fields");
     }
   };
-  const handleRecapchaChange = (value: any) => {};
+  // const handleRecapchaChange = (value: any) => {
+  //   setToken(value);
+  // };
   const isFieldNonEmpty = () => {
     if (firstName && lastName && email && password && rePassword) {
       return true;
@@ -136,13 +143,11 @@ function SignUp() {
           onChange={(e) => setRePassword(e.target.value)}
         />
       </div>
-      <div className="login-input-container middle-align top-margin-set">
-        <ReCAPTCHA
-          theme="light"
-          sitekey={TEST_SITE_KEY}
-          onChange={handleRecapchaChange}
-        />
-      </div>
+      {/* <div className="login-input-container middle-align top-margin-set">
+        <GoogleReCaptchaProvider reCaptchaKey={TEST_SITE_KEY}>
+          <GoogleReCaptcha onVerify={(token) => handleRecapchaChange(token)} />
+        </GoogleReCaptchaProvider>
+      </div> */}
       <div className="login-create-link-container top-margin-set">
         {/* eslint-disable-next-line */}
         <a
