@@ -1,6 +1,6 @@
-# downtownstimulus
+# RadicalxChange-Openfund
 
-Repo for downtown stimulus
+Repo for RadicalxChange-Openfund
 
 ## Deploy Instructions 
 
@@ -42,8 +42,10 @@ Frontend - http://localhost:3000
 2. Install docker-compose (Version > 1.25.5) `docker-compose --version`
 3. Clone Project - 
 ```
-git clone https://github.com/ethifylabs/downtownstimulus
-git checkout develop
+git clone https://github.com/vicsn/RadicalxChange-Openfund
 ```
+4. Set up [Google Firebase Account](https://firebase.google.com) account.
+5. Set up [Sendgrid](https://sendgrid.com) account.
+6. Set up [Stripe](https://stripe.com) account.
 
 *Build Project Following Above Instructions*
