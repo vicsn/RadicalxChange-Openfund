@@ -5,9 +5,9 @@ import sendgrid
 from sendgrid.helpers.mail import *
 
 
-sendgrid_key = os.getenv('SENDGRID_KEY', 'NO API FOUND')
+sendgrid_key = os.environ.get('SENDGRID_KEY', 'NO API FOUND')
 sg = sendgrid.SendGridAPIClient(sendgrid_key)
-from_email = Email("help@downtownstimulus.com", 'Downtown Stimulus')
+from_email = Email(os.environ.get('SUPPORT_EMAIL', 'NO API FOUND'), 'RadicalxChange Openfund')
 
 def send_mail(_to_mail, subject, body):
     to_email = To(_to_mail)

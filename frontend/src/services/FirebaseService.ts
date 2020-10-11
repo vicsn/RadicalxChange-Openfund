@@ -1,22 +1,14 @@
 import * as firebase from "firebase/app";
 import "firebase/auth";
 
-// const FIREBASE_KEY = process.env.FIREBASE_KEY;
-// const FIREBASE_AUTH_DOMAIN = process.env.FIREBASE_AUTH_DOMAIN;
-// const FIREBASE_DATABASE_URL = process.env.FIREBASE_DATABASE_URL;
-// const FIREBASE_PROJECT_ID = process.env.FIREBASE_PROJECT_ID;
-// const FIREBASE_STORAGE_BUCKET = process.env.FIREBASE_STORAGE_BUCKET;
-// const FIREBASE_MESSAGING_SENDER_ID = process.env.FIREBASE_MESSAGING_SENDER_ID;
-// const FIREBASE_APP_ID = process.env.FIREBASE_APP_ID;
-// const FIREBASE_MEASUREMENT_ID = process.env.FIREBASE_MEASUREMENT_ID;
-
-const FIREBASE_KEY = "AIzaSyCkhlUKdbkaMnorgs4OeQ0-pro93v-rWHo";
-const FIREBASE_AUTH_DOMAIN = "downtownstimulus.firebaseapp.com";
-const FIREBASE_DATABASE_URL = "https://downtownstimulus.firebaseio.com";
-const FIREBASE_PROJECT_ID = "downtownstimulus";
-const FIREBASE_STORAGE_BUCKET = "downtownstimulus.appspot.com";
-const FIREBASE_MESSAGING_SENDER_ID = "993720869238";
-const FIREBASE_APP_ID = "1:993720869238:web:b22cb483737dd5c71dda57";
+const FIREBASE_KEY = process.env.REACT_APP_FIREBASE_KEY;
+const FIREBASE_AUTH_DOMAIN = process.env.REACT_APP_FIREBASE_AUTH_DOMAIN;
+const FIREBASE_DATABASE_URL = process.env.REACT_APP_FIREBASE_DATABASE_URL;
+const FIREBASE_PROJECT_ID = process.env.REACT_APP_FIREBASE_PROJECT_ID;
+const FIREBASE_STORAGE_BUCKET = process.env.REACT_APP_FIREBASE_STORAGE_BUCKET;
+const FIREBASE_MESSAGING_SENDER_ID =
+  process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID;
+const FIREBASE_APP_ID = process.env.REACT_APP_FIREBASE_APP_ID;
 
 const firebaseConfig = {
   apiKey: FIREBASE_KEY,

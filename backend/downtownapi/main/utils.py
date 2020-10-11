@@ -1,4 +1,5 @@
 import premailer
+import os
 
 from django.contrib.auth.backends import ModelBackend
 from django.template.loader import render_to_string
@@ -8,7 +9,7 @@ import six
 from .models import User, Donation, Business
 
 def premailer_transform(html):
-    p = premailer.Premailer(html, base_url='https://downtownstimulus.com/')
+    p = premailer.Premailer(html, base_url=os.environ.get(FRONTEND_URL, 'NO ENV FOUND'))
     return p.transform()
 
 

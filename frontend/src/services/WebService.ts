@@ -5,7 +5,7 @@ import { IUser } from "../models/User";
 import { IDonation } from "../models/Donations";
 import { IRound } from "../models/Round";
 
-const ROOT_URL = "https://api.downtownstimulus.com";
+const ROOT_URL = process.env.REACT_APP_BACKEND_URL;
 
 export const fetchAllBusinesses = (): Observable<IBusiness[]> => {
   return defer(() => {
