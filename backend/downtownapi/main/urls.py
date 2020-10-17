@@ -16,7 +16,7 @@ urlpatterns = [
     path('donations/', DonationList.as_view(), name='donation-list'),
     path('donations/<int:pk>/', DonationListDetail.as_view(), name='donation-detail'),
 
-    # Stripe Donation POST API
+    # Webhook endpoint for Stripe's Donation POST
     path('stripe_donations/', StripeDonations.as_view(), name='stripe-donation'),
 
     # CLR Amount Calculation APIs
