@@ -1,3 +1,5 @@
+import os
+
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
@@ -23,7 +25,7 @@ def send_register_mail(sender, instance, **kwargs):
             except Exception as e:
                 print(e)
         else:
-            current_site = 'https://api.downtownstimulus.com'
+            current_site = os.environ.get('BACKEND_URL', 'NO API FOUND')
             uid = urlsafe_base64_encode(force_bytes(instance.pk))
             token = account_activation_token.make_token(instance)
             params = {

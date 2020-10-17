@@ -11,7 +11,7 @@ function HomeTopBar() {
       {/* <div className="app-icon-container">
         <img src={require("../../assets/app-icon.svg")} alt="app-icon" />
       </div> */}
-      <h1 className="home-head-line">Support Local Businesses</h1>
+      <h1 className="home-head-line">RadicalxChange Openfund</h1>
       {roundDetails.round_status === "Ongoing" ? (
         <div className="bottom-margin-set">
           <h3 className="home-tag-line">$25k Pilot Round Live Now</h3>

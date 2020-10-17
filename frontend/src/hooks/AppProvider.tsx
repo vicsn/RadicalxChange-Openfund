@@ -235,6 +235,9 @@ export const AppProvider = (props: any) => {
       facebookSignIn: async (type: string) => {
         try {
           const result = await FirebaseService.signInSocial("facebook");
+          if (result.errorCode === "auth/account-exists-with-different-credential") {
+            alert.error(result.errorMessage);
+          }
           // if (type === "signUp") {
           //   WebService.postUser(transformToUserForServer(result.user))
           //     .pipe(catchError((err) => of(`I caught: ${err}`)))
