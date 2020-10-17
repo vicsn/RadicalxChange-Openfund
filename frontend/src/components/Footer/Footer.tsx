@@ -6,6 +6,9 @@ function Footer() {
   const { setModalConfig } = useContext(ActionContext);
   const signupFormUrl = `${process.env.REACT_APP_SIGNUP_FORM_URL}`;
   const requestFormUrl = `${process.env.REACT_APP_REQUEST_FORM_URL}`;
+  const supportEmail = `${process.env.REACT_APP_SUPPORT_EMAIL}`;
+  const twitterUrl = `${process.env.REACT_APP_TWITTER_URL}`;
+  const blogUrl = `${process.env.REACT_APP_BLOG_URL}`;
 
   return (
     <div className="footer">
@@ -55,25 +58,17 @@ function Footer() {
         <h3 className="top-margin-set">Contact & Follow</h3>
         <div className="footer-contact-container top-margin-set">
           <span className="footer-contact-icon">
-            <a href={"mailto: help@downtownstimulus.com"}>
+            <a href={"mailto: ".concat(supportEmail)}>
               <img src={require("../../assets/email.svg")} alt="mail" />
             </a>
           </span>
           <span className="footer-contact-icon">
-            <a
-              href={"https://twitter.com/dtstimulus"}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href={twitterUrl} target="_blank" rel="noopener noreferrer">
               <img src={require("../../assets/tw.svg")} alt="twitter" />
             </a>
           </span>
           <span className="footer-contact-icon">
-            <a
-              href={"https://medium.com/gitcoin"}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href={blogUrl} target="_blank" rel="noopener noreferrer">
               <img src={require("../../assets/medium.svg")} alt="medium" />
             </a>
           </span>
