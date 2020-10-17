@@ -4,6 +4,9 @@ import { ActionContext } from "../../hooks";
 
 function Footer() {
   const { setModalConfig } = useContext(ActionContext);
+  const signupFormUrl = `${process.env.REACT_APP_SIGNUP_FORM_URL}`;
+  const requestFormUrl = `${process.env.REACT_APP_REQUEST_FORM_URL}`;
+
   return (
     <div className="footer">
       <div className="footer-container-left container-spacing-set">
@@ -16,20 +19,12 @@ function Footer() {
         </p>
         <ul>
           <li>
-            <a
-              href="https://docs.google.com/forms/u/4/d/e/1FAIpQLSfVTx4fPMUDEphzQiKstlz-JkDcx0RFW5Gxv4IO32zGk1AeaQ/viewform?usp=send_form"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
+            <a href={signupFormUrl} rel="noopener noreferrer" target="_blank">
               Boulder Business Sign-Up Form
             </a>
           </li>
           <li>
-            <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSfCsp5llRKXY2GswtbrtLu_d0SOmkdbEuVjaZv3fFBLQOHYPw/viewform"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
+            <a href={requestFormUrl} rel="noopener noreferrer" target="_blank">
               Bring Downtown Stimulus to My Town
             </a>
           </li>
