@@ -46,6 +46,7 @@ export const signInSocial = async (pType: string) => {
     var credential = error.credential;
     // eslint-disable-next-line
     console.log(errorCode, errorMessage, email, credential)
+    return { errorCode, errorMessage };
   }
 };
 
