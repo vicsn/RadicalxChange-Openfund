@@ -38,6 +38,7 @@
   --header3Color: #000000;
   --header3Size: 1.5rem;
   --backgroundColor: #e5e5e5;
+  --headerColor: #EBFF08;
   --footerColor: #EBFF08;
   --backgroundGradient: #000000;
 }
@@ -101,7 +102,7 @@ p {
 
 a {
   color: var(--primaryColor);
-  text-decoration: none;
+  text-decoration: underline;
   cursor: pointer;
   &:hover {
     color: var(--whiteColor);
