@@ -103,19 +103,6 @@ function Footer() {
               />
             </a>
           </div>
-          <div className="footer-sponsors-icon">
-            <a
-              href={"https://www.boulderdowntown.com/"}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src={require("../../assets/downtownboulderfoundation.png")}
-                alt="Boulder Down Town"
-                className="footer-partner-logo"
-              />
-            </a>
-          </div>
         </div>
         <h4 className="footer-support-header">
           Pilot Funding proudly supported by:

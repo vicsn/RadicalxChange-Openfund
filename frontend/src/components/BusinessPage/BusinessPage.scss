@@ -120,7 +120,7 @@
           border-radius: 13.2853px;
           margin-top: 1em;
           .business-item-progress {
-            background: linear-gradient(90deg, #fdb933 0%, #e66026 100%);
+            background: #000000;
             border-radius: 13.2853px;
             height: 10px;
             width: 10%;
@@ -164,8 +164,8 @@
           .business-donation-suggestion-item {
             display: inline-block;
             width: 30%;
-            background: #fffbf3;
-            border: 0.857157px solid rgba(191, 127, 0, 0.38);
+            background: #ffffff;
+            border: 0.857157px solid #000000;
             box-sizing: border-box;
             border-radius: 1.71431px;
             position: relative;
@@ -174,7 +174,7 @@
             cursor: pointer;
             &:hover {
               background: #ffffff;
-              border: 0.857157px solid #ff8a00;
+              border: 0.857157px solid #000000;
               box-sizing: border-box;
               box-shadow: 0px 6px 13px rgba(0, 0, 0, 0.25);
               border-radius: 1.71431px;
@@ -228,7 +228,7 @@
                 background: var(--primaryColor) !important;
                 color: var(--whiteColor) !important;
                 &:hover {
-                  background: #e66026 !important;
+                  background: var(--primaryColor) !important;
                   color: var(--whiteColor) !important;
                 }
               }
@@ -356,8 +356,8 @@
               }
 
               &:hover {
-                border: 0.857157px solid #e66026;
-                color: #e66026;
+                background: var(--primaryColor) !important;
+                color: var(--whiteColor) !important;
               }
             }
           }
@@ -389,7 +389,7 @@
             outline: none;
             cursor: pointer;
             display: flex;
-            background: #fffbf3;
+            background: #ffffff;
             align-items: center;
             justify-content: center;
 
@@ -399,8 +399,8 @@
             }
 
             &:hover {
-              border: 0.857157px solid #e66026;
-              color: #e66026;
+              background: var(--primaryColor) !important;
+              color: var(--whiteColor) !important;
             }
           }
         }
@@ -409,8 +409,8 @@
         .business-donation-details-types-container {
           .business-donation-details-type {
             display: inline-flex;
-            background: #fffbf3;
-            border: 1px solid #ffd17b;
+            background: #ffffff;
+            border: 1px solid #000000;
             box-sizing: border-box;
             border-radius: 50px;
             color: var(--primaryColor);
