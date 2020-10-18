@@ -115,8 +115,8 @@
       cursor: pointer;
 
       &:hover {
-        border: 0.857157px solid #EBFF08;
-        color: #EBFF08;
+        background: var(--primaryColor) !important;
+              color: var(--whiteColor) !important;
       }
     }
   }
