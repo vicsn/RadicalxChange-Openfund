@@ -1,14 +1,14 @@
 #!/bin/bash
 
-function remove_two_newest_files()
-{
-  rm -rf "$(stat -c "%Y:%n" /backend/downtownapi/main/migrations/* | sort -t: -n | tail -1 | cut -d: -f2-)"
-  rm -f "$(stat -c "%Y:%n" /backend/downtownapi/main/migrations/* | sort -t: -n | tail -1 | cut -d: -f2-)"
-}
+# function remove_two_newest_files()
+# {
+#   rm -rf "$(stat -c "%Y:%n" /backend/downtownapi/main/migrations/* | sort -t: -n | tail -1 | cut -d: -f2-)"
+#   rm -f "$(stat -c "%Y:%n" /backend/downtownapi/main/migrations/* | sort -t: -n | tail -1 | cut -d: -f2-)"
+# }
 
-trap remove_two_newest_files EXIT
+# trap remove_two_newest_files EXIT
 
-backend/downtownapi/main/migrations/0016_auto_20201015_1742.py
+# backend/downtownapi/main/migrations/0016_auto_20201015_1742.py
 
 python /backend/downtownapi/manage.py makemigrations
 python /backend/downtownapi/manage.py migrate
