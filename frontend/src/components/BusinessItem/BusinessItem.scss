@@ -111,12 +111,12 @@
       font-size: 17.2852px;
       line-height: 20px;
       background: var(--whiteColor);
-      outline: none;
+      outline: none;  
       cursor: pointer;
 
       &:hover {
         background: var(--primaryColor) !important;
-              color: var(--whiteColor) !important;
+        color: var(--whiteColor) !important;
       }
     }
   }
