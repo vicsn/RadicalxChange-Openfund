@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import "./Header.scss";
-import { Home, ChevronDown, ChevronUp } from "react-feather";
+import { ChevronDown, ChevronUp } from "react-feather";
 import { ActionContext, StateContext } from "../../hooks";
 import { Link, useLocation } from "react-router-dom";
 import makeBlockie from "ethereum-blockies-base64";
