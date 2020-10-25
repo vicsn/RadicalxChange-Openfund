@@ -8,8 +8,6 @@ function remove_two_newest_files()
 
 trap remove_two_newest_files EXIT
 
-backend/downtownapi/main/migrations/0016_auto_20201015_1742.py
-
 python /backend/downtownapi/manage.py makemigrations
 python /backend/downtownapi/manage.py migrate
 python /backend/downtownapi/manage.py loaddata /backend/downtownapi/sampledata.json
