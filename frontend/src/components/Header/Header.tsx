@@ -51,7 +51,7 @@ function Header() {
               </div>
               <div className="profile-item">
                 <button type="button" className="profile-item-button" onClick={(e) => setModalConfig(true, { type: "login" })}>
-                  Log In
+                  Login
                 </button>
               </div>
             </>
