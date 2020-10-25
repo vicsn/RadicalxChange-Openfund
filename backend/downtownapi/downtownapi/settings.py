@@ -28,11 +28,11 @@ if os.environ.get('PRODUCTION', "False") == "False":
 else:
     DEBUG = False
 
-ALLOWED_HOSTS = ['*', 'localhost', '127.0.0.1']
-
+# CORS whitelist
+# See https://pypi.org/project/django-cors-headers/
+CORS_ALLOWED_ORIGINS = [os.environ.get('CORS_ALLOWED_ORIGINS')]
 
 # Application definition
-
 INSTALLED_APPS = [
     'main',
     'django.contrib.admin',
@@ -93,14 +93,6 @@ DATABASES = {
     }
 }
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
-
-
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
 
@@ -149,11 +141,6 @@ AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
     'main.utils.OAuthBackend'
 )
-
-CORS_ORIGIN_ALLOW_ALL = True
-#CORS_ORIGIN_WHITELIST = (
-#    'http//:localhost:8000',
-#)
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
