@@ -31,6 +31,7 @@ else:
 # CORS whitelist
 # See https://pypi.org/project/django-cors-headers/
 CORS_ALLOWED_ORIGINS = [os.environ.get('CORS_ALLOWED_ORIGINS')]
+ALLOWED_HOSTS = [os.environ.get('ALLOWED_HOSTS')]
 
 # Application definition
 INSTALLED_APPS = [
