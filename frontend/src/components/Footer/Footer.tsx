@@ -14,12 +14,7 @@ function Footer() {
     <div className="footer">
       <div className="footer-container-left container-spacing-set">
         <h3 className="top-margin-set">Get Involved</h3>
-        <p className="top-margin-set">
-          {" "}
-          Interested in participating in the next Downtown Stimulus round for
-          Boulder, Colorado? Do you want more information for bringing Downtown
-          Stimulus to your town or region? Get in touch below!
-        </p>
+        <p className="top-margin-set"> This is a test.</p>
         <ul>
           <li>
             <a href={signupFormUrl} rel="noopener noreferrer" target="_blank">
