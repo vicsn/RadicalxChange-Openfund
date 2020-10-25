@@ -3,12 +3,12 @@
 
 @font-face {
   font-family: 'Messer Condensed';
-  src: local('Messer Condensed'), url(./fonts/MesserV2.1TRIAL-Condensed.woff) format('woff');
+  src: local('Messer Condensed'), url(./fonts/MesserV2.1-Condensed.woff) format('woff');
 }
 
 @font-face {
   font-family: 'Suisse Intl Book';
-  src: local('Suisse Intl Book'), url(./fonts/SuisseIntl-Book.ttf) format('ttf');
+  src: local('Suisse Intl Book'), url(./fonts/SuisseIntl-Book.woff) format('woff');
 }
 
 :root {
@@ -38,8 +38,8 @@
   --header3Color: #000000;
   --header3Size: 1.5rem;
   --backgroundColor: #e5e5e5;
-  --headerColor: #EBFF08;
-  --footerColor: #EBFF08;
+  --headerColor: #EBFF3E; 
+  --footerColor: #EBFF3E;
   --backgroundGradient: #000000;
 }
 

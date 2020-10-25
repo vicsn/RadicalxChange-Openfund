@@ -15,7 +15,7 @@ function Header() {
       className={`header ${location.pathname !== "/" ? "header-with-shadow" : ""}`}
     >
       <Link to="/" className="header-home-container">
-        <Home />
+      <img src={require("../../assets/RXC_logo.svg")} alt={"RXC logo"} width="70vmin" height="70vmin"/>
       </Link>
       <div className="header-profile-container">
         {user ? (
