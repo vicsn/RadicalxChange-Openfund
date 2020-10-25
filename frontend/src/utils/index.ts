@@ -3,6 +3,10 @@ import { IDonation } from "../models/Donations";
 import { IRound } from "../models/Round";
 
 export const mapToBusinesses = (businesses: IBusiness[]): IBusiness[] => {
+  // if Too Many Requests, return an empty list
+  if ("detail" in businesses) {
+    return [];
+  }
   return businesses.map(mapToBusiness);
 };
 
