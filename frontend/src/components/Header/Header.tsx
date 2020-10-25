@@ -15,7 +15,7 @@ function Header() {
       className={`header ${location.pathname !== "/" ? "header-with-shadow" : ""}`}
     >
       <Link to="/" className="header-home-container">
-      <img src={require("../../assets/RXC_logo.svg")} alt={"RXC logo"} width="70vmin" height="70vmin"/>
+        <img src={require("../../assets/RXC_logo.svg")} alt={"RXC logo"} width="70vmin" height="70vmin" />
       </Link>
       <div className="header-profile-container">
         {user ? (
@@ -25,8 +25,8 @@ function Header() {
                 user.profile_pic
                   ? user.profile_pic
                   : user.email
-                  ? makeBlockie(user.email)
-                  : null
+                    ? makeBlockie(user.email)
+                    : null
               }
               alt="profile"
               className="profile-icon"
@@ -38,26 +38,24 @@ function Header() {
               {!dropdownActive ? (
                 <ChevronDown></ChevronDown>
               ) : (
-                <ChevronUp></ChevronUp>
-              )}
+                  <ChevronUp></ChevronUp>
+                )}
             </div>
           </>
         ) : (
-          <>
-            <div
-              className="profile-item"
-              onClick={(e) => setModalConfig(true, { type: "signUp" })}
-            >
-              Sign up
-            </div>
-            <div
-              className="profile-item"
-              onClick={(e) => setModalConfig(true, { type: "login" })}
-            >
-              Log In
-            </div>
-          </>
-        )}
+            <>
+              <div className="profile-item">
+                <button type="button" className="profile-item-button" onClick={(e) => setModalConfig(true, { type: "signUp" })}>
+                  Sign Up
+                </button>
+              </div>
+              <div className="profile-item">
+                <button type="button" className="profile-item-button" onClick={(e) => setModalConfig(true, { type: "login" })}>
+                  Log In
+                </button>
+              </div>
+            </>
+          )}
         {dropdownActive && (
           <div
             className="menu-overlay"
