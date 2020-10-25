@@ -126,6 +126,10 @@ USE_L10N = True
 USE_TZ = True
 
 
+# Session expiry
+# See: https://docs.djangoproject.com/en/3.1/topics/http/sessions/#browser-length-sessions-vs-persistent-sessions
+SESSION_EXPIRE_AT_BROWSER_CLOSE=True
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
