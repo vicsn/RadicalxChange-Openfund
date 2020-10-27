@@ -1,5 +1,16 @@
 version: "3"
 services:
+  db:
+    image: postgres
+    environment:
+      - POSTGRES_DB=$POSTGRES_DB
+      - POSTGRES_USER=$POSTGRES_USER
+      - POSTGRES_PASSWORD=$POSTGRES_PASSWORD
+    ports:
+      - "5432:5432"
+    volumes:
+      - db-data:/var/lib/postgresql/data
+
   api:
     build:
       context: .
@@ -7,6 +18,8 @@ services:
     command: bash /scripts/deploy/api_deploy.sh
     ports:
       - "8000:8000"
+    depends_on:
+      - db
     volumes:
       - ./backend:/backend
       - ./scripts:/scripts
@@ -33,7 +46,9 @@ services:
     restart: always
 
   nginx:
-    image: ethifylabs/downtownstimulus
+    build:
+      context: .
+      dockerfile: ./PDockerfile
     ports:
       - "80:80"
       - "443:443"
