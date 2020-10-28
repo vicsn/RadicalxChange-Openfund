@@ -49,3 +49,10 @@ git clone https://github.com/vicsn/RadicalxChange-Openfund
 6. Set up [Stripe](https://stripe.com) account.
 
 *Build Project Following Above Instructions*
+
+## Adding projects
+
+> :warning: **The contents of the .env file should not be shared publicly**
+
+1. Go to <backend_url>/add_business_csv/<token>, whereby `token` is the ADD_BUSINESS_CSV_TOKEN set in .env
+2. Upload a CSV file with business data, see `backend/downtownapi/samplecompany.csv` for an example
