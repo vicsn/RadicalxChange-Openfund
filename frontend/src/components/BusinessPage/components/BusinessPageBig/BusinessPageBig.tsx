@@ -80,27 +80,6 @@ function BusinessPageBig(props) {
             <p className="business-details-body-content top-margin-set">
               {props.selectedBusiness.history}
             </p>
-            {props.selectedBusiness.business_video_link && (
-              <div className="top-margin-set ">
-                <iframe
-                  className="business-detail-video-iframe"
-                  src={props.selectedBusiness.business_video_link}
-                  frameBorder="0"
-                  title="business youtube video"
-                />
-              </div>
-            )}
-            <h2 className="business-details-body-title top-margin-set">
-              And Then COVID Happened...
-            </h2>
-            <p className="business-details-body-content top-margin-set">
-              {props.selectedBusiness.covid_story}
-            </p>
-            <img
-              className="business-details-body-staff-images top-margin-set bottom-margin-set"
-              src={props.selectedBusiness.staff_images[0]}
-              alt="cover"
-            ></img>
           </div>
         </div>
         <div className="business-donation-container">

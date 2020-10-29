@@ -164,7 +164,7 @@
           .business-donation-suggestion-item {
             display: inline-block;
             width: 30%;
-            background: #ffffff;
+            background: #F9FBE6;
             border: 0.857157px solid #000000;
             box-sizing: border-box;
             border-radius: 1.71431px;
@@ -228,8 +228,8 @@
                 background: var(--primaryColor) !important;
                 color: var(--whiteColor) !important;
                 &:hover {
-                  background: var(--primaryColor) !important;
-                  color: var(--whiteColor) !important;
+                  background: var(--whiteColor) !important;
+                  color: var(--primaryColor) !important;
                 }
               }
               .business-donation-suggestion-button {
@@ -238,17 +238,17 @@
                 padding: 6px 12px;
                 text-transform: capitalize;
                 font-size: 16px;
-                color: var(--primaryColor);
-                background: var(--whiteColor);
+                color: var(--whiteColor);
+                background: var(--primaryColor);
                 outline: none;
                 max-width: 100%;
                 text-align: center;
                 cursor: pointer;
                 // transition: all 0.2s linear;
-                // &:hover {
-                //   background: var(--primaryColor);
-                //   color: var(--whiteColor);
-                // }
+                &:hover {
+                  background: var(--whiteColor) !important;
+                  color: var(--primaryColor) !important;
+                }
               }
             }
           }
@@ -409,7 +409,7 @@
         .business-donation-details-types-container {
           .business-donation-details-type {
             display: inline-flex;
-            background: #ffffff;
+            background: #F9FBE6;
             border: 1px solid #000000;
             box-sizing: border-box;
             border-radius: 50px;
@@ -593,7 +593,7 @@
           .business-donation-suggestion-item {
             display: inline-block;
             width: 32%;
-            background: #fffbf3;
+            background: #F9FBE6;
             border: 0.857157px solid rgba(191, 127, 0, 0.38);
             box-sizing: border-box;
             border-radius: 1.71431px;
