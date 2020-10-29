@@ -9,6 +9,8 @@ const FIREBASE_STORAGE_BUCKET = process.env.REACT_APP_FIREBASE_STORAGE_BUCKET;
 const FIREBASE_MESSAGING_SENDER_ID =
   process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID;
 const FIREBASE_APP_ID = process.env.REACT_APP_FIREBASE_APP_ID;
+const FIREBASE_MEASUREMENT_ID = process.env.REACT_APP_FIREBASE_MEASUREMENT_ID;
+
 
 const firebaseConfig = {
   apiKey: FIREBASE_KEY,
@@ -18,6 +20,7 @@ const firebaseConfig = {
   storageBucket: FIREBASE_STORAGE_BUCKET,
   messagingSenderId: FIREBASE_MESSAGING_SENDER_ID,
   appId: FIREBASE_APP_ID,
+  measurementId: FIREBASE_MEASUREMENT_ID,
 };
 
 // Initialize Firebase
