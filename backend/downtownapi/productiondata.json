@@ -1,0 +1,10 @@
+[
+  {
+    "model": "main.CLRRound",
+    "pk": 1,
+    "fields": {
+      "round_number": 1,
+      "round_status": "Ongoing"
+    }
+  }
+]
