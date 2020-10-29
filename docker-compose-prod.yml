@@ -23,6 +23,7 @@ services:
     volumes:
       - ./backend:/backend
       - ./scripts:/scripts
+      - ./firebase.json:/backend/quadraticfundingapi/firebase.json
     working_dir: /backend/quadraticfundingapi/
     environment:
       - SENDGRID_KEY=$SENDGRID_KEY

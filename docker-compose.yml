@@ -23,6 +23,7 @@ services:
     volumes:
       - ./backend:/backend
       - ./scripts:/scripts
+      - ./firebase.json:/backend/downtownapi/firebase.json
     environment:
       - SENDGRID_KEY=$SENDGRID_KEY
       - PRODUCTION=False
