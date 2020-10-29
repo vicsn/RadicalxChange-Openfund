@@ -3,6 +3,7 @@
   flex-direction: column;
   background: var(--headerColor);
   box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.2);
+  margin-top: -4em;
 
   .app-icon-container {
     text-align: center;
@@ -17,6 +18,13 @@
   .home-tag-line {
     text-align: center;
     margin: 0rem;
+    color: var(--header1Color);
+  }
+
+  .home-tag-line-1 {
+    text-align: center;
+    margin: 0.5rem;
+    color: var(--header1Color);
   }
 
   .list-action-container {
