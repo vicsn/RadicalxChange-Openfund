@@ -169,11 +169,8 @@ function BusinessPage() {
       ></BusinessPageSmall>
       <div className="other-business-container">
         <div className="other-business-list-container">
-          <h2 className="other-business-list-title">Other Local Businesses</h2>
-          <p className="other-business-list-description">
-            {" "}
-            Please consider supporting these other amazing Boulder businesses!
-          </p>
+          <h2 className="other-business-list-title">Other RxC Openfund Projects</h2>
+
           <ul className="business-list">
             {backupBusinesses.map((business, i) => (
               <BusinessItem key={i} business={business} />

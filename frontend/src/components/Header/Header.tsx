@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import "./Header.scss";
-import { Home, ChevronDown, ChevronUp } from "react-feather";
+import { ChevronDown, ChevronUp } from "react-feather";
 import { ActionContext, StateContext } from "../../hooks";
 import { Link, useLocation } from "react-router-dom";
 import makeBlockie from "ethereum-blockies-base64";
@@ -15,7 +15,7 @@ function Header() {
       className={`header ${location.pathname !== "/" ? "header-with-shadow" : ""}`}
     >
       <Link to="/" className="header-home-container">
-        <Home />
+        <img src={require("../../assets/RXC_logo.svg")} alt={"RXC logo"} width="70vmin" height="70vmin" />
       </Link>
       <div className="header-profile-container">
         {user ? (
@@ -25,8 +25,8 @@ function Header() {
                 user.profile_pic
                   ? user.profile_pic
                   : user.email
-                  ? makeBlockie(user.email)
-                  : null
+                    ? makeBlockie(user.email)
+                    : null
               }
               alt="profile"
               className="profile-icon"
@@ -38,26 +38,24 @@ function Header() {
               {!dropdownActive ? (
                 <ChevronDown></ChevronDown>
               ) : (
-                <ChevronUp></ChevronUp>
-              )}
+                  <ChevronUp></ChevronUp>
+                )}
             </div>
           </>
         ) : (
-          <>
-            <div
-              className="profile-item"
-              onClick={(e) => setModalConfig(true, { type: "signUp" })}
-            >
-              Sign up
-            </div>
-            <div
-              className="profile-item"
-              onClick={(e) => setModalConfig(true, { type: "login" })}
-            >
-              Log In
-            </div>
-          </>
-        )}
+            <>
+              <div className="profile-item">
+                <button type="button" className="profile-item-button" onClick={(e) => setModalConfig(true, { type: "signUp" })}>
+                  Sign Up
+                </button>
+              </div>
+              <div className="profile-item">
+                <button type="button" className="profile-item-button" onClick={(e) => setModalConfig(true, { type: "login" })}>
+                  Login
+                </button>
+              </div>
+            </>
+          )}
         {dropdownActive && (
           <div
             className="menu-overlay"

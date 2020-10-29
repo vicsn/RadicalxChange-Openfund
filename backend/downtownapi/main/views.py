@@ -141,6 +141,8 @@ class StripeDonations(generics.GenericAPIView):
     def post(self, request, *args, **kwargs):
         payload = request.body
         signature = request.headers.get("Stripe-Signature")
+        serializer_class = DonationSerializer
+
         try:
             event = stripe.Webhook.construct_event(
                 payload=payload, sig_header=signature, secret=STRIPE_WEBHOOK_KEY
