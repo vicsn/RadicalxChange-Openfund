@@ -4,11 +4,6 @@ import { ActionContext } from "../../hooks";
 
 function Footer() {
   const { setModalConfig } = useContext(ActionContext);
-  /*const signupFormUrl = `${process.env.REACT_APP_SIGNUP_FORM_URL}`;
-  const requestFormUrl = `${process.env.REACT_APP_REQUEST_FORM_URL}`;
-  const supportEmail = `${process.env.REACT_APP_SUPPORT_EMAIL}`;
-  const twitterUrl = `${process.env.REACT_APP_TWITTER_URL}`;
-  const blogUrl = `${process.env.REACT_APP_BLOG_URL}`;*/
 
   return (
     <div className="footer">
@@ -63,7 +58,7 @@ function Footer() {
               rel="noopener noreferrer"
             >
               <img
-                src={require("../../assets/image 23.png")} /*Kevin can you change this image to the RxC logo image in the footer folder*/
+                src={require("../../assets/RXC_logo.svg")}
                 alt="RadicalxChange Foundation"
                 className="footer-partner-logo"
               />
@@ -71,9 +66,9 @@ function Footer() {
           </div>
         </div>
         <h3 className="top-margin-set">RxC Openfund Codebase</h3>
-        <a href="https://feld.com" rel="noopener noreferrer" target="_blank">
+        <a href="https://github.com/vicsn/RadicalxChange-Openfund" rel="noopener noreferrer" target="_blank">
           <img
-            src={require("../../assets/image 23.png")} /*Kevin can you change this image to the Github logo image in the footer folder*/
+            src={require("../../assets/GitHub-Mark-64px.png")}
             alt="Github"
             className="footer-partner-logo"
           />
