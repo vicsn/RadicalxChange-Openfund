@@ -26,7 +26,7 @@ Frontend - http://localhost:3000
 
 3. Create a New superuser for Backend API
 
-```docker exec -it downtownstimulus_api_1 downtownapi/manage.py createsuperuser```
+```docker exec -it quadraticfunding_api_1 quadraticfundingapi/manage.py createsuperuser```
 
 ## API Docs 
 

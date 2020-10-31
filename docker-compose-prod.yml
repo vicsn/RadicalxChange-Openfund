@@ -10,7 +10,7 @@ services:
     volumes:
       - ./backend:/backend
       - ./scripts:/scripts
-    working_dir: /backend/downtownapi/
+    working_dir: /backend/quadraticfundingapi/
     environment:
       - SENDGRID_KEY=$SENDGRID_KEY
       - PRODUCTION=True

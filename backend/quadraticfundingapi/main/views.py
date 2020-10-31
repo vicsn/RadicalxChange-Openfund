@@ -38,7 +38,7 @@ logger = logging.getLogger(__name__)
 class RootView(APIView):
     def get(self, request):
         resp = {
-            'title': 'Gitcoin Downtown Stimulus API'
+            'title': 'Quadratic Funding API'
         }
         return Response(json.dumps(resp), status=status.HTTP_201_CREATED)
 
@@ -372,7 +372,7 @@ class StripeSecretKeyView(generics.GenericAPIView):
                     amount=serializer.validated_data.get('amount'),
                     currency='usd',
                     payment_method_types=['card'],
-                    description='Downtown Stimulus Donation',
+                    description='RadicalxChange Openfund Donation',
                     stripe_account=business.stripe_id,
                     # customer=user.stripe_customer_id,
                     shipping={

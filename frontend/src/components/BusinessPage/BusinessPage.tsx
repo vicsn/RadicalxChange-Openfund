@@ -136,7 +136,7 @@ function BusinessPage() {
     <div className="business-page">
       {selectedBusiness && (
         <MetaTags>
-          <title>Downtown Stimulus</title>
+          <title>RadicalxChange Openfund</title>
           <meta name="description" content={selectedBusiness.short_description} />
           <meta property="og:title" content={selectedBusiness.name} />
           <meta property="og:image" content="../../assets/cover.jpg" />

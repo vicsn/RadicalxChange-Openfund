@@ -17,7 +17,7 @@ def send_register_mail(sender, instance, **kwargs):
             params = {
                 'user_name': instance.first_name,
             }
-            subject = "Welcome to the Downtown Stimulus! Your Account is Created"
+            subject = "Welcome to the RadicalxChange Openfund! Your Account is Created"
 
             try:
                 mail_body = get_mail_body('create_account', params)
@@ -36,7 +36,7 @@ def send_register_mail(sender, instance, **kwargs):
                 'token': token,
                 'user': instance,
             }
-            subject = "Welcome to the Downtown Stimulus! Your Account is Created. Please verify your Email"
+            subject = "Welcome to the RadicalxChange Openfund! Your Account is Created. Please verify your Email"
 
             try:
                 mail_body = get_mail_body('create_account', params)

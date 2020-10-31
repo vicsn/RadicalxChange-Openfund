@@ -36,7 +36,7 @@ function Login() {
   };
   return (
     <div className="login">
-      <h2 className="login-header">Connect with Downtown Stimulus</h2>
+      <h2 className="login-header">Connect with RadicalxChange Openfund</h2>
       <SocialLogin type="login" />
       <p className="login-text top-margin-set">Or login with your email!</p>
       <div className="login-input-container top-margin-set">

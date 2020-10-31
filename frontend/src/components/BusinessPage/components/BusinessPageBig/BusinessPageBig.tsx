@@ -157,7 +157,7 @@ function BusinessPageBig(props) {
                   <span role="img" aria-label="tada">
                     🎉
                   </span>{" "}
-                  Important Note: Round 1 of the Downtown Stimulus has closed! Thank
+                  Important Note: Round 1 of the RadicalxChange Openfund has closed! Thank
                   you for your support!!{" "}
                   <span role="img" aria-label="tada">
                     🎉

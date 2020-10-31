@@ -2,7 +2,7 @@ FROM python:3
 ENV PYTHONUNBUFFERED 1
 
 RUN mkdir /backend
-COPY backend/downtownapi/ /backend
+COPY backend/quadraticfundingapi/ /backend
 
 WORKDIR /backend
 

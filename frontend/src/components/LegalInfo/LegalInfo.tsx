@@ -5,7 +5,7 @@ function LegalInfo() {
   return (
     <div className="legal-info">
       <h2 className="top-margin-set text-center">
-        Downtown Stimulus <br />
+        RadicalxChange Openfund <br />
         Legal Info + Privacy Policy
       </h2>
       <h3 className="top-margin-set">Legal Info</h3>
@@ -24,11 +24,11 @@ function LegalInfo() {
           donations made on this platform or from matching donation funds.{" "}
         </li>
         <li>
-          All funds are sent directly to the businesses. Downtown Stimulus does not,
+          All funds are sent directly to the businesses. RadicalxChange Openfund does not,
           at any time, have access to any funds submitted.
         </li>
         <li>
-          Downtown Stimulus does not, at any time, handle your credit card info. All
+          RadicalxChange Openfund does not, at any time, handle your credit card info. All
           payment software and services is provided by Stripe, a third party service
           provider. The matching $30,000 fund is held by Boulder’s Downtown
           Partnership 501(c)6, and will distribute the matching funds to each
@@ -110,7 +110,7 @@ function LegalInfo() {
           <li>
             <b>Device & Usage Information:</b>
             <br />
-            When you interact with Downtown Stimulus through the Services, we
+            When you interact with RadicalxChange Openfund through the Services, we
             automatically receive and store certain information from devices that you
             use to access the Services. This information is collected passively by
             using various technologies, and includes the type of internet browser or
@@ -118,9 +118,9 @@ function LegalInfo() {
             Services, your operating system, and location data through an IP address
             that identifies the city and state where you logged into the Platform or
             your precise geo-location if you have permitted your mobile device to
-            provide that information to us. Downtown Stimulus either stores such
+            provide that information to us. RadicalxChange Openfund either stores such
             information itself or such information is included in databases owned and
-            maintained by Downtown Stimulus, or its agents or service providers.
+            maintained by RadicalxChange Openfund, or its agents or service providers.
           </li>
         </ol>
         <ol className="top-margin-set">
@@ -191,10 +191,10 @@ function LegalInfo() {
         <b>INFORMATION WE COLLECT</b>
         <li>
           This Policy applies only to the Services. The Services can contain links to
-          other web sites not operated or controlled by Downtown Stimulus (the
+          other web sites not operated or controlled by RadicalxChange Openfund (the
           "Third-Party Sites"). The policies and procedures we described here do not
           apply to the Third-Party Sites. The links from the Services do not imply
-          that Downtown Stimulus endorses or has reviewed the Third-Party Sites. We
+          that RadicalxChange Openfund endorses or has reviewed the Third-Party Sites. We
           suggest contacting those sites directly for information on their respective
           privacy policies.
         </li>
@@ -203,7 +203,7 @@ function LegalInfo() {
       <ul className="top-margin-set">
         <b>SECURITY</b>
         <li>
-          Downtown Stimulus has implemented technical and organizational security
+          RadicalxChange Openfund has implemented technical and organizational security
           measures to protect the information provided via the Services from loss,
           misuse, and unauthorized access, disclosure, alteration, or destruction.
           For example, limiting access to information only to employees and
@@ -212,7 +212,7 @@ function LegalInfo() {
           transmission is ever fully secure or error free. In particular, email sent
           to or from the Services may not be secure. Therefore, you should take
           special care in deciding what information you send to us via email. Please
-          keep this in mind when disclosing any information to Downtown Stimulus via
+          keep this in mind when disclosing any information to RadicalxChange Openfund via
           the Internet.
         </li>
         <li>

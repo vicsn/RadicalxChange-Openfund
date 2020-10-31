@@ -8,14 +8,14 @@ function QFExplainer() {
         How our donation matching works?
       </h2>
       <p className="top-margin-set">
-        <b>Downtown Stimulus</b> is a democratic way of funding projects. They’ve put
+        <b>RadicalxChange Openfund</b> is a democratic way of funding projects. They’ve put
         together a matching pool of $25k from local philanthropists that is going to
         be distributed to downtown Boulder Businesses, to help bridge the gap between
         normal and now.
       </p>
 
       <p className="top-margin-set">
-        Downtown Stimulus is going to match contributions based on the{" "}
+        RadicalxChange Openfund is going to match contributions based on the{" "}
         <b>number of people contributing</b> more so than the amount they contribute.
         This is a way of making sure that the{" "}
         <b>matching power of each contributor</b> is maximized.
@@ -37,7 +37,7 @@ function QFExplainer() {
           <b>At the end of the round, both grants get $100 in matching</b>
         </li>
       </ul>
-      <p className="top-margin-set">In Downtown Stimulus’ Matching Formula:</p>
+      <p className="top-margin-set">In RadicalxChange Openfund’ Matching Formula:</p>
       <ul className="top-margin-set">
         <li>Grant 1 gets $100 from 1 funder.</li>
         <li>Grant 2 gets $100 from 10 funders.</li>
@@ -61,7 +61,7 @@ function QFExplainer() {
         business can earn is capped at $8,000 of the $25,0000 fund.
       </p>
       <p className="top-margin-set">
-        In Downtown Stimulus, the preferences of the many outweigh the preferences of
+        In RadicalxChange Openfund, the preferences of the many outweigh the preferences of
         the few.{" "}
         <a
           href="https://gitcoin.co/blog/experiments-with-liberal-radicalism/"
