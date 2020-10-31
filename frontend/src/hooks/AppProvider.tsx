@@ -181,31 +181,7 @@ export const AppProvider = (props: any) => {
       googleSignIn: async (type: string) => {
         try {
           const result = await FirebaseService.signInSocial("google");
-          // if (type === "signUp") {
-          //   WebService.postUser(transformToUserForServer(result.user))
-          //     .pipe(catchError((err) => of(`I caught: ${err}`)))
-          //     .subscribe(async (data) => {
-          //       if (data.ok) {
-          //         const authToken = await FirebaseService.getAuthToken();
-          //         WebService.loginUser(result.user.email, authToken)
-          //           .pipe(catchError((err) => of(`I caught: ${err}`)))
-          //           .subscribe(async (data) => {
-          //             if (data.ok) {
-          //               const user = await data.json();
-          //               sessionStorage.setItem("user", JSON.stringify(user));
-          //               dispatch({
-          //                 type: "SET_USER",
-          //                 user,
-          //               });
-          //             } else {
-          //               console.error("Error", await data.json());
-          //             }
-          //           });
-          //       } else {
-          //         console.error("Error", await data.json());
-          //       }
-          //     });
-          // } else {
+
           const authToken = await FirebaseService.getAuthToken();
 
           WebService.loginUser({
@@ -238,31 +214,7 @@ export const AppProvider = (props: any) => {
           if (result.errorCode === "auth/account-exists-with-different-credential") {
             alert.error(result.errorMessage);
           }
-          // if (type === "signUp") {
-          //   WebService.postUser(transformToUserForServer(result.user))
-          //     .pipe(catchError((err) => of(`I caught: ${err}`)))
-          //     .subscribe(async (data) => {
-          //       if (data.ok) {
-          //         const authToken = await FirebaseService.getAuthToken();
-          //         WebService.loginUser(result.user.email, authToken)
-          //           .pipe(catchError((err) => of(`I caught: ${err}`)))
-          //           .subscribe(async (data) => {
-          //             if (data.ok) {
-          //               const user = await data.json();
-          //               sessionStorage.setItem("user", JSON.stringify(user));
-          //               dispatch({
-          //                 type: "SET_USER",
-          //                 user,
-          //               });
-          //             } else {
-          //               console.log("Error", await data.json());
-          //             }
-          //           });
-          //       } else {
-          //         console.error("Error", await data.json());
-          //       }
-          //     });
-          // } else {
+
           const authToken = await FirebaseService.getAuthToken();
 
           WebService.loginUser({

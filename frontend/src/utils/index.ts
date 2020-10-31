@@ -3,6 +3,10 @@ import { IDonation } from "../models/Donations";
 import { IRound } from "../models/Round";
 
 export const mapToBusinesses = (businesses: IBusiness[]): IBusiness[] => {
+  // if Too Many Requests, return an empty list
+  if ("detail" in businesses) {
+    return [];
+  }
   return businesses.map(mapToBusiness);
 };
 
@@ -52,26 +56,6 @@ export const mapToRound = (round: IRound): IRound => {
   return {
     round_number: round.round_number,
     round_status: round.round_status,
-  };
-};
-
-export const transformToUserForServer = (user: any) => {
-  return {
-    password: user.password,
-    last_login: user.last_login,
-    is_superuser: user.is_superuser,
-    username: user.email,
-    first_name: user.displayName.split(" ")[0],
-    last_name: user.displayName.split(" ")[1],
-    email: user.email,
-    is_staff: user.is_staff,
-    is_active: user.is_active,
-    date_joined: user.date_joined,
-    profile_pic: user.photoURL,
-    phone_number: user.phoneNumber,
-    oauth_uuid: user.uid,
-    groups: user.groups,
-    user_permissions: user.user_permissions,
   };
 };
 
