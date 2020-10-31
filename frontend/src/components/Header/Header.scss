@@ -5,9 +5,9 @@
 .header {
   display: flex;
   align-items: center;
-  padding: 1em 1.5em;
+  padding: 1.5em 1.5em;
   justify-content: space-between;
-  background: var(--whiteColor);
+  background: var(--headerColor);
   .header-home-container {
     width: 34px;
     height: 34px;
@@ -19,6 +19,7 @@
     border-radius: 6.0473px;
     /* margin-left: 1em; */
     cursor: pointer;
+    z-index: 99;
   }
 
   .header-profile-container {
@@ -88,11 +89,24 @@
     .profile-item {
       color: var(--primaryColor);
       cursor: pointer;
-      margin-left: 1em;
+      margin-left: 0.5em; 
       font-size: 18.9008px;
       line-height: 22px;
       font-family: var(--paragraphFont);
     }
+    
+      .profile-item-button {
+        width: 7em;
+        padding-right: 1em;
+        padding-left: 1em;
+        box-sizing: border-box;
+        border-radius: 3px;
+        height: 2em;
+        font-size: 1em;
+        color: var(--whiteColor);
+        background: var(--primaryColor);
+        cursor: pointer;
+      }
   }
 }
 

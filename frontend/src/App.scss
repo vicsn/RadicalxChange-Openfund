@@ -1,19 +1,26 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap");
+@font-face {
+  font-family: 'Messer Condensed';
+  src: local('Messer Condensed'), url(./fonts/MesserV2.1-Condensed.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Suisse Intl Book';
+  src: local('Suisse Intl Book'), url(./fonts/SuisseIntl-Book.woff) format('woff');
+}
 
 :root {
-  --header1Font: "Roboto Slab", serif;
-  --header2Font: "Roboto Slab", serif;
-  --header3Font: "Roboto Slab", serif;
-  --paragraphFont: "Roboto", sans-serif;
+  --header1Font: "Messer Condensed", serif;
+  --header2Font: "Messer Condensed", serif;
+  --header3Font: "Messer Condensed", serif;
+  --paragraphFont: "Suisse Intl Book", sans-serif;
   --baseFontSize: 16px;
-  --primaryColor: #ff8a00;
-  --primaryHighlightColor: #ffac4b;
-  --yellowHighlightColor: #fffbf3;
-  --yellowColor: #ffc700;
-  --yellowBorderColor: #f0dfbe;
-  --greenColor: #57ef3f;
-  --blueColor: #34b6ff;
+  --primaryColor: #000000;
+  --primaryHighlightColor: #000000;
+  --yellowHighlightColor: #000000;
+  --yellowColor:#000000;
+  --yellowBorderColor: #000000;
+  --greenColor: #000000;
+  --blueColor: #000000;
   --whiteColor: #fff;
   --grey1Color: #ebebeb;
   --grey2Color: #c6c6c6;
@@ -21,15 +28,16 @@
   --grey4Color: #525252;
   --grey5Color: #3a3a3a;
   --blackColor: #000000;
-  --header1Color: #e76127;
+  --header1Color: #000000;
   --header1Size: 2.5rem;
-  --header2Color: #3a3a3a;
+  --header2Color: #000000;
   --header2Size: 2rem;
-  --header3Color: #525252;
+  --header3Color: #000000;
   --header3Size: 1.5rem;
   --backgroundColor: #e5e5e5;
-  --footerColor: #262626;
-  --backgroundGradient: linear-gradient(270deg, #ffc700 0%, #ff8a00 100%);
+  --headerColor: #edff38; 
+  --footerColor: #edff38;
+  --backgroundGradient: #000000;
 }
 
 .App {
@@ -54,6 +62,7 @@ h1 {
   line-height: 3rem;
   margin-block-start: 0em !important;
   margin-block-end: 0em !important;
+  text-transform: uppercase;
 }
 
 h2 {
@@ -64,6 +73,7 @@ h2 {
   line-height: 2.5rem;
   margin-block-start: 0em !important;
   margin-block-end: 0em !important;
+  text-transform: uppercase;
 }
 
 h3 {
@@ -74,6 +84,7 @@ h3 {
   line-height: 2rem;
   margin-block-start: 0em !important;
   margin-block-end: 0em !important;
+  text-transform: uppercase;  
 }
 
 p {
@@ -88,10 +99,10 @@ p {
 
 a {
   color: var(--primaryColor);
-  text-decoration: none;
+  text-decoration: underline;
   cursor: pointer;
   &:hover {
-    color: var(--yellowColor);
+    color: var(--whiteColor);
   }
   &:active {
     color: var(--primaryColor);

@@ -4,21 +4,21 @@ import { StateContext } from "../../hooks";
 // import { Search } from "react-feather";
 function HomeTopBar() {
   // const { searchBusinesses } = useContext(ActionContext);
-  const { roundDetails } = useContext(StateContext);
+  const { roundDetails } = useContext(StateContext);  
 
   return (
     <div className="home-top-bar">
       {/* <div className="app-icon-container">
         <img src={require("../../assets/app-icon.svg")} alt="app-icon" />
       </div> */}
-      <h1 className="home-head-line">RadicalxChange Openfund</h1>
+      <h1 className="home-head-line">RadicalxChange Open Fund</h1>
       {roundDetails.round_status === "Ongoing" ? (
         <div className="bottom-margin-set">
-          <h3 className="home-tag-line">$25k Pilot Round Live Now</h3>
-          <h4 className="home-tag-line">
-            Contribute to these 5 businesses by July 15th 2020 to get your
+          <h4 className="home-tag-line-1">Current $15k RxC Apps round live now</h4>
+          <h5 className="home-tag-line-1">
+            Contribute to these projects by the 10th of December to get your
             contribution Matched!
-          </h4>
+          </h5>
         </div>
       ) : (
         <p className="home-tag-line bottom-margin-set">
