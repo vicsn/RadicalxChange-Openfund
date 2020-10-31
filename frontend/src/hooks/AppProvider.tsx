@@ -8,7 +8,7 @@ import { useHistory, useLocation } from "react-router-dom";
 import { useAlert } from "react-alert";
 import { IBusiness } from "../models/Business";
 
-const StripeAccountId = `${process.env.REACT_APP_STRIPE_ACCOUNT_ID}`;
+const StripePublicKey = `${process.env.REACT_APP_STRIPE_PUBLIC_KEY}`;
 
 const actionInitialValue = {
   setModalConfig: (openModal: boolean, modalConfig: any) => {},
@@ -279,7 +279,7 @@ export const AppProvider = (props: any) => {
         WebService.fetchSingleBusiness(selectedBusinessId).subscribe((data: any) => {
           setSelectedBusinessStripeAccountId(data.stripe_id);
           const stripePromise = loadStripe(
-            { StripeAccountId },
+            StripePublicKey,
             { stripeAccount: data.stripe_id },
           );
           dispatch({ type: "SET_SELECTED_BUSINESS", selectedBusiness: data });
