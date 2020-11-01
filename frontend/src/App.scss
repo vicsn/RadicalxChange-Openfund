@@ -8,16 +8,6 @@
   src: local('Suisse Intl Book'), url(./fonts/SuisseIntl-Book.woff) format('woff');
 }
 
-@font-face {
-  font-family: 'Messer Condensed';
-  src: local('Messer Condensed'), url(./fonts/MesserV2.1TRIAL-Condensed.woff) format('woff');
-}
-
-@font-face {
-  font-family: 'Suisse Intl Book';
-  src: local('Suisse Intl Book'), url(./fonts/SuisseIntl-Book.ttf) format('ttf');
-}
-
 :root {
   --header1Font: "Messer Condensed", serif;
   --header2Font: "Messer Condensed", serif;
