@@ -58,5 +58,6 @@ docker-compose -f docker-compose-prod.yml up --build
 
 ## How to add projects
 
-1. Go to `<backend_url>/add_business_csv/<token>`, whereby `<token>` is the `ADD_BUSINESS_CSV_TOKEN` set in `.env`
-2. Upload a CSV file with business data, see `backend/quadraticfunding/samplecompany.csv` for an example
+1. Add project images to `backend/quadraticfunding/static/` directory
+2. Go to `<backend_url>/add_business_csv/<token>`, whereby `<token>` is the `ADD_BUSINESS_CSV_TOKEN` set in `.env`
+3. Upload a CSV file with business data, see `backend/quadraticfunding/samplecompany.csv` for an example
