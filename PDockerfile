@@ -3,6 +3,7 @@ FROM node as builder
 RUN mkdir /frontend
 COPY frontend/ /frontend
 COPY scripts/ /scripts
+COPY .env.prod.public /frontend/.env
 
 WORKDIR /frontend
 

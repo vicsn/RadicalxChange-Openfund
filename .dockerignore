@@ -1,2 +1,5 @@
 docker-compose.yml
 .env
+nginx
+dh-param
+certs

@@ -30,6 +30,7 @@ from .models import User, Business, Donation, CLRRound
 STRIPE_KEY = os.environ.get('STRIPE_KEY')
 STRIPE_WEBHOOK_KEY = os.environ.get('STRIPE_WEBHOOK_KEY')
 CURRENT_ROUND = os.environ.get('CURRENT_ROUND', 1)
+ADD_BUSINESS_CSV_TOKEN = os.environ.get('ADD_BUSINESS_CSV_TOKEN')
 
 stripe.api_key = STRIPE_KEY
 logger = logging.getLogger(__name__)
@@ -38,7 +39,7 @@ logger = logging.getLogger(__name__)
 class RootView(APIView):
     def get(self, request):
         resp = {
-            'title': 'Gitcoin Downtown Stimulus API'
+            'title': 'Quadratic Funding API'
         }
         return Response(json.dumps(resp), status=status.HTTP_201_CREATED)
 
@@ -307,9 +308,13 @@ class CustomAuthToken(ObtainAuthToken):
             })
 
 
-def add_business_csv(request):
+def add_business_csv(request, token):
+    if not token == ADD_BUSINESS_CSV_TOKEN:
+        return HttpResponse('Token is invalid!')
+
     if request.method == 'GET':
         return render(request, 'add_business_csv.html')
+
     if request.method == "POST":
         csv_file = request.FILES['file']
         data_set = csv_file.read().decode('UTF-8')
@@ -317,24 +322,32 @@ def add_business_csv(request):
 
         for count, row in enumerate(csv.reader(io_string, delimiter=',')):
             if count == 0 or count == 1:
+                print("Skipping row: ", count)
                 continue
+
             logger.info(row)
             business = Business(
-                name=row[2],
-                owner_email=row[1],
+                name=row[1],
+                owner_email=row[2],
                 short_description=row[3],
-                history=row[7],
-                covid_story=row[8],
-                expenditure_details=row[9].strip().split(','),
-                other_content=row[15],
-                website_link=row[4],
-                facebook_profile_link=row[5],
-                instagram_profile_link=row[6],
-                stripe_id="",
-                logo=row[10],
-                cover_image=row[11],
-                main_business_image=row[11],
-                staff_images=[row[12]],
+                history=row[4],
+                covid_story=row[5],
+                other_content=row[6],
+                logo=row[7],
+                cover_image=row[8],
+                main_business_image=row[9],
+                staff_images=row[10].strip().split(','),
+                business_video_link=row[11],
+                website_link=row[12],
+                facebook_profile_link=row[13],
+                instagram_profile_link=row[14],
+                stripe_id=row[15],
+                expenditure_details=row[16].strip().split(','),
+                goal_amount=row[17],
+                donation_received=0,
+                current_clr_matching_amount=0,
+                cap_reached=False,
+                accepting_donations=True,
             )
             business.save()
 
@@ -372,7 +385,7 @@ class StripeSecretKeyView(generics.GenericAPIView):
                     amount=serializer.validated_data.get('amount'),
                     currency='usd',
                     payment_method_types=['card'],
-                    description='Downtown Stimulus Donation',
+                    description='RadicalxChange Openfund Donation',
                     stripe_account=business.stripe_id,
                     # customer=user.stripe_customer_id,
                     shipping={

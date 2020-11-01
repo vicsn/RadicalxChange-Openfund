@@ -8,6 +8,8 @@ import { useHistory, useLocation } from "react-router-dom";
 import { useAlert } from "react-alert";
 import { IBusiness } from "../models/Business";
 
+const StripePublicKey = `${process.env.REACT_APP_STRIPE_PUBLIC_KEY}`;
+
 const actionInitialValue = {
   setModalConfig: (openModal: boolean, modalConfig: any) => {},
   searchBusinesses: (searchText: string, backupBusinesses: any[]) => {},
@@ -277,7 +279,7 @@ export const AppProvider = (props: any) => {
         WebService.fetchSingleBusiness(selectedBusinessId).subscribe((data: any) => {
           setSelectedBusinessStripeAccountId(data.stripe_id);
           const stripePromise = loadStripe(
-            "pk_test_Q26FN4uKxghGq2K1UASYAHHy00aJTxLQsY",
+            StripePublicKey,
             { stripeAccount: data.stripe_id },
           );
           dispatch({ type: "SET_SELECTED_BUSINESS", selectedBusiness: data });

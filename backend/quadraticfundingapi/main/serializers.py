@@ -19,7 +19,7 @@ FIREBASE_PROJECT_ID = os.environ.get('FIREBASE_PROJECT_ID')
 FIREBASE_STORAGE_BUCKET = os.environ.get('FIREBASE_STORAGE_BUCKET')
 FIREBASE_MESSAGING_SENDER_ID = os.environ.get('FIREBASE_MESSAGING_SENDER_ID')
 FIREBASE_APPID = os.environ.get('FIREBASE_APPID')
-FIREBASE_ADMIN_CONFIG_PATH = os.environ.get('FIREBASE_ADMIN_CONFIG_PATH')
+FIREBASE_ADMIN_CONFIG_PATH = "/backend/quadraticfundingapi/firebase.json"
 
 
 class UserSerializer(serializers.ModelSerializer):

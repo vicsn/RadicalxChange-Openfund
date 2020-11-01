@@ -143,7 +143,7 @@ function BusinessPageSmall(props) {
                   <span role="img" aria-label="tada">
                     🎉
                   </span>{" "}
-                  <i>Important Note</i>: Round 1 of the Downtown Stimulus has closed!
+                  <i>Important Note</i>: Round 1 of the RadicalxChange Openfund has closed!
                   Thank you for your support!!{" "}
                   <span role="img" aria-label="tada">
                     🎉

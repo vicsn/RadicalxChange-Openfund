@@ -52,7 +52,7 @@ function DonationThank() {
           <div className="donation-thanks-links-icon">
             <FacebookShareButton
               url={shareUrl}
-              quote={`I just donated to ${selectedBusiness.name} as part of the Downtown Stimulus pilot program! \nFollow the link to donate to the 6 Boulder businesses participating in this new fundraiser aimed at distributing philanthropic funds to local businesses during the COVID-19 pandemic.`}
+              quote={`I just donated to ${selectedBusiness.name} as part of the RadicalxChange Openfund pilot program! \nFollow the link to donate to the 6 Boulder businesses participating in this new fundraiser aimed at distributing philanthropic funds to local businesses during the COVID-19 pandemic.`}
             >
               <FacebookIcon size={56} round />
             </FacebookShareButton>
@@ -63,7 +63,7 @@ function DonationThank() {
           <div className="donation-thanks-links-icon">
             <TwitterShareButton
               url={shareUrl}
-              title={`I just donated to ${selectedBusiness.name} as part of the Downtown Stimulus pilot program! \nFollow the link to donate to the 6 Boulder businesses participating in this new fundraising pilot! `}
+              title={`I just donated to ${selectedBusiness.name} as part of the RadicalxChange Openfund pilot program! \nFollow the link to donate to the 6 Boulder businesses participating in this new fundraising pilot! `}
             >
               <TwitterIcon size={56} round />
             </TwitterShareButton>
@@ -74,7 +74,7 @@ function DonationThank() {
           <EmailShareButton
             url={shareUrl}
             subject={`Help ${selectedBusiness.name}‘s Fundraise!`}
-            body={`I just donated to ${selectedBusiness.name} as part of the Downtown Stimulus pilot program! \nFollow the link to donate to the 6 Boulder businesses participating in this new fundraiser aimed at distributing philanthropic funds to local businesses during the COVID-19 pandemic.`}
+            body={`I just donated to ${selectedBusiness.name} as part of the RadicalxChange Openfund pilot program! \nFollow the link to donate to the 6 Boulder businesses participating in this new fundraiser aimed at distributing philanthropic funds to local businesses during the COVID-19 pandemic.`}
           >
             <EmailIcon size={56} round />
           </EmailShareButton>

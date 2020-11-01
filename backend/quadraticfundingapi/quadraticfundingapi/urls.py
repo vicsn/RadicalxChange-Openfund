@@ -1,4 +1,4 @@
-"""downtownapi URL Configuration
+"""quadraticfundingapi URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.0/topics/http/urls/
@@ -21,9 +21,9 @@ from rest_framework import permissions
 
 schema_view = get_schema_view(
    openapi.Info(
-      title="Downtown Stimulus API",
+      title="Quadratic Funding API",
       default_version='v1',
-      description="This is the Backend API for Downtown Stimulus",
+      description="This is the Backend API for Quadtratic Funding",
       terms_of_service="https://www.google.com/policies/terms/",
       contact=openapi.Contact(email="downtownstimulus@gitcoin.co"),
       license=openapi.License(name="BSD License"),
