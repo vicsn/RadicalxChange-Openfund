@@ -6,8 +6,6 @@ campaign.
 
 Project URL: https://matchfund.app
 
-Loom video link: https://www.loom.com/share/b9daa295a5264078af12a357a0d5be07
-
 ## Development instructions
 
 > :warning: **The contents of the .env file should not be shared publicly**
