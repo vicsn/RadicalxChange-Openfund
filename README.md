@@ -6,9 +6,9 @@ campaign.
 
 Loom video link: https://www.loom.com/share/b9daa295a5264078af12a357a0d5be07
 
-> :warning: **The contents of the .env file should not be shared publicly**
-
 ## Development instructions
+
+> :warning: **The contents of the .env file should not be shared publicly**
 
 1. Install Docker and Docker Compose (Version > 1.25.5)
 2. Rename `.env.test` to `.env` and set all variables with your preferred values.
