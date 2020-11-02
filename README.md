@@ -4,6 +4,8 @@ This is the repository for the RadicalxChange Openfund back- and frontend. With
 this app, you can run a Quadratic Funding / Liberal Radicalism crowdfunding
 campaign.
 
+Project URL: https://matchfund.app
+
 Loom video link: https://www.loom.com/share/b9daa295a5264078af12a357a0d5be07
 
 ## Development instructions
